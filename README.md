@@ -1,22 +1,24 @@
 ## 基础
+最基础的知识: 如何计算复杂度(时间复杂度，空间复杂度），这个关系到写代码的时候，如何在取选择最优的算法或者判断你选择的算法是否满足题目的要求。<br>
+举几个直观例子<br>
+1. 对于单次循环而言<br>
+```
+for (int i = 0; i < n; i++) 
+```
+这个时间复杂度为O(n), 如果其中n为100,0000，那么cpu执行的时间差不多就是1s
+2. 对于多次循环而言<br>
+```
+for (int i = 0; i < n; i++) {
+    for (int j = i; j < n; j++) {
+        
+    }
+}
+
+```
+这个时间复杂度为O(n^2), 如果为100,000那么整个时间就会变成100,000 * 100,000，远远超过1s，这个时间肯定是不满足题目要求的，如果n < 2000，那么就可以采用O(n ^ 2)的算法，
+
+有时候可以通过时间复杂度来判断应该选择什么算法，比如[分割回文串](https://leetcode.cn/problems/palindrome-partitioning/description/?envType=problem-list-v2&envId=string),其中n为16，这个时候可以大概判断是使用dfs来进行递归遍历
+![Alt text](./pic/image.png)
+
 ## 字符串
-[最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/description/) —— [提交记录](/code/longest-palindromic-substring.py)<br>
-[最长公共前缀](https://leetcode.cn/submissions/detail/686532867/) —— [提交记录](/code/longest-common-prefix.py)<br>
-[最长公共前缀的长度](https://leetcode.cn/problems/find-the-length-of-the-longest-common-prefix/description/) —— [提交记录](/code/find-the-length-of-the-longest-common-prefix.py)<br>
-[最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/description/) —— [提交记录](/code/longest-valid-parentheses.py)<br>
-[编辑距离](https://leetcode.cn/submissions/detail/687585894/) —— [提交记录](/code/edit-distance.py)<br>
-[最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring/) —— [提交记录](/code/minimum-window-substring.py)<br>
-[无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/) —— [提交记录](/code/longest-substring-without-repeating-characters.py)<br>
-[最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/) —— [提交记录](/code/longest-palindromic-subsequence.py)<br>
-
-
-### 题型总结
-#### 单字符串
-<b> I. 最长回文子串 </b>
-```
- 基础方法：以某个字符作为中心(假如)
-```
-II. 
-#### 两个字符串
-
-## 数组
+[跳转地址](notes/字符串.md)
