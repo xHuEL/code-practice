@@ -28,8 +28,15 @@ for (int i = 0; i < n; i++) {
 有时候可以通过时间复杂度来判断应该选择什么算法，比如[分割回文串](https://leetcode.cn/problems/palindrome-partitioning/description/?envType=problem-list-v2&envId=string),其中n为16，这个时候可以大概判断是使用dfs来进行递归遍历
 ![Alt text](./pic/image.png)
 
+## 排序
+
+[跳转地址](./notes/排序.md)
+
 ## 字符串
+
 [跳转地址](notes/字符串.md)
+
+
 
 
 
