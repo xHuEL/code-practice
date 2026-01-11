@@ -44,4 +44,4 @@ for (int i = 0; i < n; i++) {
 
 ## 刷题记录
 
-![image-20260111191448884](.\notes\pic\提交记录.png)
+![提交记录](./notes/pic/提交记录.png)
