@@ -36,6 +36,16 @@ for (int i = 0; i < n; i++) {
 
 [拆炸弹](https://leetcode.cn/problems/defuse-the-bomb/) —— [提交记录](./code/练手题/defuse-the-bomb.py) [提交记录2](./code/练手题/defuse-the-bomb_v2.py)
 
+[验证回文串](https://leetcode.cn/problems/valid-palindrome/)
+
+[有效的字母异位词](https://leetcode.cn/problems/valid-anagram/)
+
+[反转字符串中的元音字母](https://leetcode.cn/problems/reverse-vowels-of-a-string/)
+
+[数字转换为十六进制数](https://leetcode.cn/problems/convert-a-number-to-hexadecimal/)
+
+[两个数组的交集](https://leetcode.cn/problems/intersection-of-two-arrays/)
+
 ## 滑动窗口
 
 [跳转地址](./notes/滑动窗口.md)
