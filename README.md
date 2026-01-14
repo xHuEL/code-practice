@@ -25,7 +25,7 @@ for (int i = 0; i < n; i++) {
 
    简单来说，时间复杂度为o(2^n), 所以这种题目一般要求n都比较小
 
-有时候可以通过时间复杂度来判断应该选择什么算法，比如[分割回文串](https://leetcode.cn/problems/palindrome-partitioning/description/?envType=problem-list-v2&envId=string),其中n为16，这个时候可以大概判断是使用dfs来进行递归遍历
+有时候可以通过时间复杂度来判断应该选择什么算法，比如[分割回文串](https://leetcode.cn/problems/palindrome-partitioning/description/?envType=problem-list-v2&envId=string),其中n为16，这个时候可以大概判断是使用dfs来进行递归遍历，后续再补
 ![Alt text](./pic/image.png)
 
 ## 练手题
@@ -36,15 +36,15 @@ for (int i = 0; i < n; i++) {
 
 [拆炸弹](https://leetcode.cn/problems/defuse-the-bomb/) —— [提交记录](./code/练手题/defuse-the-bomb.py) [提交记录2](./code/练手题/defuse-the-bomb_v2.py)
 
-[验证回文串](https://leetcode.cn/problems/valid-palindrome/)
+[验证回文串](https://leetcode.cn/problems/valid-palindrome/) —— [提交记录](./code/valid-palindrome.py)
 
-[有效的字母异位词](https://leetcode.cn/problems/valid-anagram/)
+[有效的字母异位词](https://leetcode.cn/problems/valid-anagram/) —— [提交记录](./code/valid-anagram.py)
 
-[反转字符串中的元音字母](https://leetcode.cn/problems/reverse-vowels-of-a-string/)
+[反转字符串中的元音字母](https://leetcode.cn/problems/reverse-vowels-of-a-string/) —— [提交记录](./code/reverse-vowels-of-a-string.py)
 
-[数字转换为十六进制数](https://leetcode.cn/problems/convert-a-number-to-hexadecimal/)
+[数字转换为十六进制数](https://leetcode.cn/problems/convert-a-number-to-hexadecimal/) —— [提交记录](./code/convert-a-number-to-hexadecimal.py)
 
-[两个数组的交集](https://leetcode.cn/problems/intersection-of-two-arrays/)
+[两个数组的交集](https://leetcode.cn/problems/intersection-of-two-arrays/) —— [提交记录](./code/intersection-of-two-arrays.py)
 
 ## 滑动窗口
 
