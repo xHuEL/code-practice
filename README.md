@@ -46,19 +46,115 @@ for (int i = 0; i < n; i++) {
 
 [两个数组的交集](https://leetcode.cn/problems/intersection-of-two-arrays/) —— [提交记录](./code/intersection-of-two-arrays.py)
 
+***
+
+2026.01.17更新
+
+
+
 ## 滑动窗口
 
-[跳转地址](./notes/滑动窗口.md)
+###### 一、题型1：定长滑动窗口
+
+***
+
+【基础版】
+
+[定长子串中元音的最大数目](https://leetcode.cn/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) 
+
+[子数组最大平均数 I](https://leetcode.cn/problems/maximum-average-subarray-i/)
+
+[大小为 K 且平均值大于等于阈值的子数组数目](https://leetcode.cn/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/)
+
+[半径为 k 的子数组平均值](https://leetcode.cn/problems/k-radius-subarray-averages/)
+
+[得到 K 个黑块的最少涂色次数](https://leetcode.cn/problems/minimum-recolors-to-get-k-consecutive-black-blocks/)
+
+[几乎唯一子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-almost-unique-subarray/)
+
+[长度为 K 子数组中的最大和](https://leetcode.cn/problems/maximum-sum-of-distinct-subarrays-with-length-k/) 
+
+[可获得的最大点数](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards/) 
+
+***
+
+【进阶版 - 不急着做】
+
+[使库存平衡的最少丢弃次数](https://leetcode.cn/problems/minimum-discards-to-balance-inventory/)
+
+[爱生气的书店老板](https://leetcode.cn/problems/grumpy-bookstore-owner/)
+
+[重新安排会议得到最多空余时间 I](https://leetcode.cn/problems/reschedule-meetings-for-maximum-free-time-i/) 
+
+###### 二、题型2：不定长滑动窗口
+
+不定长滑动窗口主要分为三类：求最长子数组，求最短子数组，求子数组个数。
+
+***
+
+【基础版】
+
+[无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
+
+[每个字符最多出现两次的最长子字符串](https://leetcode.cn/problems/maximum-length-substring-with-two-occurrences/) 
+
+[删掉一个元素以后全为 1 的最长子数组](https://leetcode.cn/problems/longest-subarray-of-1s-after-deleting-one-element/) 
+
+[使数组平衡的最少移除数目](https://leetcode.cn/problems/minimum-removals-to-balance-array/) 
+
+[尽可能使字符串相等](https://leetcode.cn/problems/get-equal-substrings-within-budget/) 
+
+[水果成篮](https://leetcode.cn/problems/fruit-into-baskets/) 
+
+[删除子数组的最大得分](https://leetcode.cn/problems/maximum-erasure-value/) 
+
+[最多 K 个重复元素的最长子数组](https://leetcode.cn/problems/length-of-longest-subarray-with-at-most-k-frequency/) 
+
+[考试的最大困扰度](https://leetcode.cn/problems/maximize-the-confusion-of-an-exam/) 
+
+[最大连续 1 的个数 III](https://leetcode.cn/problems/max-consecutive-ones-iii/) 
+
+[将 x 减到 0 的最小操作数](https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero/) 
+
+[最长半重复子数组](https://leetcode.cn/problems/longest-semi-repeating-subarray/)
+
+***
+
+【进阶版 —— 不急着做】
+
+###### 三、题型3：分组循环
+
+###### 四、题型4：单序列双指针
+
+
 
 ## 递归
 
-###### 题型1: 回溯
+###### 一、题型1: 回溯
 
 [子集](https://leetcode.cn/problems/subsets/) —— [提交记录]()
 
 [电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/)
 
-###### 题型2: 二叉树
+[全排列](https://leetcode.cn/problems/permutations/)
+
+[组合总和](https://leetcode.cn/problems/combination-sum/)
+
+[单词搜索](https://leetcode.cn/problems/word-search/)
+
+[分割回文串](https://leetcode.cn/problems/palindrome-partitioning/)
+
+[岛屿数量](https://leetcode.cn/problems/number-of-islands/)
+
+[括号生成](https://leetcode.cn/problems/generate-parentheses/)
+
+
+
+***
+
+
+
+###### 二、题型2: 二叉树
 
 ```tex
 二叉树遍历总结
@@ -315,7 +411,9 @@ D   E   F
    ①D ②E  ④F
 ```
 
+***
 
+【基础篇】
 
 [二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)  —— [提交记录](./code/maximum-depth-of-binary-tree.py)  后序遍历
 
@@ -325,13 +423,33 @@ D   E   F
 
 [路径总和](https://leetcode.cn/problems/path-sum/)
 
-###### 题型3: 分治与递归
+[二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/)
 
-###### 题型4:  其他递归应用
+[二叉树展开为链表](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/)
 
-###### 详细总结
+[从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+
+[从中序与后序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+
+[二叉树剪枝](https://leetcode.cn/problems/binary-tree-pruning/)
+
+***
+
+【提升篇】
+
+***
+
+
+
+###### 三、题型3: 分治与递归
+
+###### 四、题型4:  其他递归应用
+
+###### 五、详细总结
 
 [跳转地址](./notes/递归.md)
+
+
 
 ## 排序
 
