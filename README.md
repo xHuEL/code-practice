@@ -30,6 +30,12 @@ for (int i = 0; i < n; i++) {
 
 ## 练手题
 
+**没状态的时候记得找几个练手题来做，没提交记录的题目只是列出来，我也没做**
+
+***
+
+
+
 [最长和谐子序列](https://leetcode.cn/problems/longest-harmonious-subsequence/) —— [提交记录](./code/练手题/longest-harmonious-subsequence.py) [提交记录2](./code/练手题/longest-harmonious-subsequence_v2.py)
 
 [存在重复元素 II](https://leetcode.cn/problems/contains-duplicate-ii/) —— [提交记录](./code/练手题/contains-duplicate-ii.py)
@@ -48,7 +54,39 @@ for (int i = 0; i < n; i++) {
 
 ***
 
-2026.01.17更新
+2026.01.18更新
+
+[1. 两数之和](https://leetcode.cn/problems/two-sum/)
+
+[26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
+
+[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/)
+
+[206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
+
+[21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
+
+[70. 爬楼梯](https://leetcode.cn/problems/climbing-stairs/)
+
+[买卖股票的最佳时机](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/)
+
+[环形链表](https://leetcode.cn/problems/linked-list-cycle/)
+
+[删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)
+
+[二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
+
+[三数之和](https://leetcode.cn/problems/3sum/)
+
+[ 打家劫舍](https://leetcode.cn/problems/house-robber/)
+
+[二分查找](https://leetcode.cn/problems/binary-search/) 
+
+[螺旋矩阵](https://leetcode.cn/problems/spiral-matrix/) 
+
+[验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/)
+
+***
 
 
 
@@ -222,8 +260,6 @@ for (int i = 0; i < n; i++) {
 
 [ 区间和的个数](https://leetcode.com/problems/count-of-range-sum/)
 
-
-
 ###### 二、题型2：自定义排序
 
 [重新排列日志文件](https://leetcode.com/problems/reorder-data-in-log-files/)
@@ -296,9 +332,19 @@ for (int i = 0; i < n; i++) {
 
 ###### 七、详细解释
 
-
-
 [跳转地址](./notes/排序.md)
+
+
+
+## 搜索
+
+##### 一、题型1: 深度优先搜索
+
+
+
+###### 二、题型2：宽度优先搜索
+
+
 
 ## 字符串
 
