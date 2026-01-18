@@ -208,6 +208,16 @@ for (int i = 0; i < n; i++) {
 
 【基础篇】
 
+[二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/)
+
+[二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
+
+[二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/)
+
+[二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
+
+[二叉树的锯齿形层序遍历](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/)
+
 [二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)  —— [提交记录](./code/递归/maximum-depth-of-binary-tree.py)  后序遍历
 
 [翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/) —— [提交记录](./code/递归/invert-binary-tree.py) 后序遍历
