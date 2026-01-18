@@ -176,9 +176,9 @@ for (int i = 0; i < n; i++) {
 
 ###### 一、题型1: 回溯
 
-[子集](https://leetcode.cn/problems/subsets/) —— [提交记录]()
+[子集](https://leetcode.cn/problems/subsets/) —— [提交记录](./code/递归/subsets.py)
 
-[电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/)
+[电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/) —— [提交记录](./code/递归/letter-combinations-of-a-phone-number.py)
 
 [全排列](https://leetcode.cn/problems/permutations/)
 
@@ -208,23 +208,23 @@ for (int i = 0; i < n; i++) {
 
 【基础篇】
 
-[二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)  —— [提交记录](./code/maximum-depth-of-binary-tree.py)  后序遍历
+[二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)  —— [提交记录](./code/递归/maximum-depth-of-binary-tree.py)  后序遍历
 
-[翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/) —— [提交记录](./code/invert-binary-tree.py) 后序遍历
+[翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/) —— [提交记录](./code/递归/invert-binary-tree.py) 后序遍历
 
-[对称二叉树](https://leetcode.cn/problems/symmetric-tree/)
+[对称二叉树](https://leetcode.cn/problems/symmetric-tree/) —— [提交记录](./code/递归/symmetric-tree.py)
 
-[路径总和](https://leetcode.cn/problems/path-sum/)
+[路径总和](https://leetcode.cn/problems/path-sum/) —— [提交记录](./code/递归/path-sum.py)
 
-[二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/)
+[二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/) —— [提交记录](./code/递归/diameter-of-binary-tree.py)
 
-[二叉树展开为链表](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/)
+[二叉树展开为链表](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/) —— [提交记录](./code/递归/flatten-binary-tree-to-linked-list.py)
 
-[从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+[从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) —— [提交记录](./code/递归/construct-binary-tree-from-preorder-and-inorder-traversal.py)
 
-[从中序与后序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+[从中序与后序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) —— [提交记录](./code/递归/construct-binary-tree-from-inorder-and-postorder-traversal.py)
 
-[二叉树剪枝](https://leetcode.cn/problems/binary-tree-pruning/)
+[二叉树剪枝](https://leetcode.cn/problems/binary-tree-pruning/) —— [提交记录](./code/递归/binary-tree-pruning.py)
 
 ***
 
