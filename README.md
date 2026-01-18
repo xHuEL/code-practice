@@ -56,7 +56,7 @@ for (int i = 0; i < n; i++) {
 
 2026.01.18更新
 
-[1. 两数之和](https://leetcode.cn/problems/two-sum/)
+[2. 两数相加](https://leetcode.cn/problems/add-two-numbers/)
 
 [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
 
