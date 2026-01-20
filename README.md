@@ -30,7 +30,7 @@ for (int i = 0; i < n; i++) {
 
 ## 练手题
 
-**千万不要嫌自己慢。。我在学校刚练的时候，每天都在喊笨脑子快转。。**
+**千万不要嫌自己慢。。我在学校刚练的时候，每天都在喊笨脑子快转，时间还多着呢。。**
 
 **没状态的时候记得找几个练手题来做，没提交记录的题目只是列出来，我也没做**
 
@@ -77,12 +77,61 @@ for (int i = 0; i < n; i++) {
 [2. 两数相加](https://leetcode.cn/problems/add-two-numbers/) —— [提交记录](./code/练手题/add-two-numbers.py)
 
 ```python
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        head = None
+        tail = None
+        catch = 0  # 是否进位
+        while l1 is not None or l2 is not None:
+            newNode = ListNode(catch)
+            if l1 is not None:
+                newNode.val += l1.val
+                l1 = l1.next
+
+            if l2 is not None:
+                newNode.val += l2.val
+                l2 = l2.next
+
+            catch = int(newNode.val / 10) # 首先计算出进位符
+            newNode.val = int(newNode.val % 10) # 然后计算出去掉进位，最后的结果
+
+            if head is None:
+                head = newNode
+                tail = newNode
+            else:
+                tail.next = newNode
+                tail = newNode
+
+        if catch > 0:
+            newNode = ListNode(catch)
+            tail.next = newNode
+
+        return head
+# 这道题其实是大数加法的变形,有时候大数加法是两个str相加，这道题目就涉及到链表的操作。
+# 其实还是挺难的，关键还是了解链表操作，链表关键的head和tail，还有边界条件。
 
 ```
 
-
+![image-20260120235847441](.\pic\双数加法.png)
 
 [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
+
+```python
+def removeDuplicates(self, nums: List[int]) -> int:
+    n = len(nums)
+    ll = 0
+    for i in range(1, n):
+        if nums[i] == nums[i - 1]:
+           continue
+        else:
+           nums[ll + 1] = nums[i]
+           ll += 1
+    return ll
+# 从第一位开始，比较它跟前一位是不是相同，如果不是相同那么将它移动到位置l，同时位置l记得要1
+# 这是一道模拟题，其实也可以开一个新的列表，这样更好理解
+```
+
+
 
 [20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/)
 
