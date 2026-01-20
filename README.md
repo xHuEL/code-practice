@@ -41,16 +41,14 @@ for (int i = 0; i < n; i++) {
 [最长和谐子序列](https://leetcode.cn/problems/longest-harmonious-subsequence/) —— [提交记录](./code/练手题/longest-harmonious-subsequence.py) [提交记录2](./code/练手题/longest-harmonious-subsequence_v2.py)
 
 > ```python
-> 方法1：
-> 首先使用dict来存储所有数字的个数
+> # 方法1：
+> # 首先使用dict来存储所有数字的个数
 > for i in range(n):
 >     if maps.__contains__(nums[i]):
 >        maps[nums[i]] = maps[nums[i]] + 1
 >     else:
 >        maps[nums[i]] = 1
-> 再遍历所有的数字，并找到比它大1的数字的个数，
-> 
-> 方法2：
+> # 再遍历所有的数字，并找到比它大1的数字的个数，
 > 
 > ```
 
@@ -96,11 +94,11 @@ class Solution:
             newNode.val = int(newNode.val % 10) # 然后计算出去掉进位，最后的结果
 
             if head is None:
-                head = newNode
-                tail = newNode
+                head = newNode # 如果链表的起始位置未保存，记得保存一下
+                tail = newNode # 相当于链表就一个节点
             else:
-                tail.next = newNode
-                tail = newNode
+                tail.next = newNode # 在尾结点之后添加一个节点
+                tail = newNode # 将添加的节点设置为尾节点
 
         if catch > 0:
             newNode = ListNode(catch)
@@ -160,6 +158,8 @@ def removeDuplicates(self, nums: List[int]) -> int:
 [验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/)
 
 ***
+
+## 链表
 
 
 
