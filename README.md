@@ -30,6 +30,8 @@ for (int i = 0; i < n; i++) {
 
 ## 练手题
 
+**千万不要嫌自己慢。。我在学校刚练的时候，每天都在喊笨脑子快转。。**
+
 **没状态的时候记得找几个练手题来做，没提交记录的题目只是列出来，我也没做**
 
 ***
@@ -37,6 +39,22 @@ for (int i = 0; i < n; i++) {
 
 
 [最长和谐子序列](https://leetcode.cn/problems/longest-harmonious-subsequence/) —— [提交记录](./code/练手题/longest-harmonious-subsequence.py) [提交记录2](./code/练手题/longest-harmonious-subsequence_v2.py)
+
+> ```python
+> 方法1：
+> 首先使用dict来存储所有数字的个数
+> for i in range(n):
+>     if maps.__contains__(nums[i]):
+>        maps[nums[i]] = maps[nums[i]] + 1
+>     else:
+>        maps[nums[i]] = 1
+> 再遍历所有的数字，并找到比它大1的数字的个数，
+> 
+> 方法2：
+> 
+> ```
+
+
 
 [存在重复元素 II](https://leetcode.cn/problems/contains-duplicate-ii/) —— [提交记录](./code/练手题/contains-duplicate-ii.py)
 
@@ -56,7 +74,13 @@ for (int i = 0; i < n; i++) {
 
 2026.01.18更新
 
-[2. 两数相加](https://leetcode.cn/problems/add-two-numbers/)
+[2. 两数相加](https://leetcode.cn/problems/add-two-numbers/) —— [提交记录](./code/练手题/add-two-numbers.py)
+
+```python
+
+```
+
+
 
 [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
 
@@ -185,6 +209,8 @@ for (int i = 0; i < n; i++) {
 [组合总和](https://leetcode.cn/problems/combination-sum/)
 
 [单词搜索](https://leetcode.cn/problems/word-search/)
+
+[组合](https://leetcode.cn/problems/combinations/)
 
 [分割回文串](https://leetcode.cn/problems/palindrome-partitioning/)
 
@@ -348,9 +374,7 @@ for (int i = 0; i < n; i++) {
 
 ## 搜索
 
-##### 一、题型1: 深度优先搜索
-
-
+##### 一、题型1: 深度优先搜索 — 
 
 ###### 二、题型2：宽度优先搜索
 
