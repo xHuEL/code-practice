@@ -161,6 +161,46 @@ def removeDuplicates(self, nums: List[int]) -> int:
 
 ## 链表
 
+[反转链表](https://leetcode.cn/problems/reverse-linked-list/)
+
+[合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
+
+[删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)
+
+[移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/)
+
+[环形链表](https://leetcode.cn/problems/linked-list-cycle/)
+
+[ 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/)
+
+[相交链表](https://leetcode.cn/problems/intersection-of-two-linked-lists/)
+
+[删除链表的倒数第N个节点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)
+
+[链表的中间结点](https://leetcode.cn/problems/middle-of-the-linked-list/)
+
+[两两交换链表中的节点](https://leetcode.cn/problems/swap-nodes-in-pairs/)
+
+[奇偶链表](https://leetcode.cn/problems/odd-even-linked-list/)
+
+[分隔链表](https://leetcode.cn/problems/partition-list/)
+
+[ 旋转链表](https://leetcode.cn/problems/rotate-list/)
+
+[复制带随机指针的链表](https://leetcode.cn/problems/copy-list-with-random-pointer/)
+
+[反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii/)
+
+[重排链表](https://leetcode.cn/problems/reorder-list/)
+
+[排序链表](https://leetcode.cn/problems/sort-list/)
+
+[回文链表](https://leetcode.cn/problems/palindrome-linked-list/)
+
+[K个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/)
+
+[合并K个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/)
+
 
 
 ## 滑动窗口
