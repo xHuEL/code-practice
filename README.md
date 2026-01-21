@@ -30,8 +30,6 @@ for (int i = 0; i < n; i++) {
 
 ## 练手题
 
-**千万不要嫌自己慢。。我在学校刚练的时候，每天都在喊笨脑子快转，时间还多着呢。。**
-
 **没状态的时候记得找几个练手题来做，没提交记录的题目只是列出来，我也没做**
 
 ***
@@ -110,7 +108,7 @@ class Solution:
 
 ```
 
-![image-20260120235847441](.\pic\双数加法.png)
+![image-20260120235847441](./pic/双数加法.png)
 
 [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
 
