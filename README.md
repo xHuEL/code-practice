@@ -28,6 +28,14 @@ for (int i = 0; i < n; i++) {
 有时候可以通过时间复杂度来判断应该选择什么算法，比如[分割回文串](https://leetcode.cn/problems/palindrome-partitioning/description/?envType=problem-list-v2&envId=string),其中n为16，这个时候可以大概判断是使用dfs来进行递归遍历，后续再补
 ![Alt text](./pic/image.png)
 
+## 练习重点
+
+**1. 首先是排序，一般有一道很复杂的场景题，涉及到的就是排序**
+
+**2.  接下来就是练手题**
+
+
+
 ## 练手题
 
 **没状态的时候记得找几个练手题来做，没提交记录的题目只是列出来，我也没做**
@@ -464,6 +472,10 @@ def removeDuplicates(self, nums: List[int]) -> int:
 ##### 一、题型1: 深度优先搜索 — 
 
 ###### 二、题型2：宽度优先搜索
+
+## 数据结构
+
+###### 题型1：并查集
 
 
 
