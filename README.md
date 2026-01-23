@@ -379,17 +379,17 @@ def removeDuplicates(self, nums: List[int]) -> int:
 
 ###### 一、题型1：归并排序
 
-[合并两个有序数组](https://leetcode.com/problems/merge-sorted-array/)
+[合并两个有序数组](https://leetcode.cn/problems/merge-sorted-array/)
 
-[ 合并两个有序链表](https://leetcode.com/problems/merge-two-sorted-lists/)
+[合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
 
-[ 合并K个升序链表](https://leetcode.com/problems/merge-k-sorted-lists/)
+[ 合并K个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/)
 
-[ 排序链表](https://leetcode.com/problems/sort-list/)
+[ 排序链表](https://leetcode.cn/problems/sort-list/)
 
-[翻转对](https://leetcode.com/problems/reverse-pairs/)
+[翻转对](https://leetcode.cn/problems/reverse-pairs/)
 
-[ 区间和的个数](https://leetcode.com/problems/count-of-range-sum/)
+[ 区间和的个数](https://leetcode.cn/problems/count-of-range-sum/)
 
 ###### 二、题型2：自定义排序
 
