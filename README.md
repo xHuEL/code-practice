@@ -75,7 +75,64 @@ for (int i = 0; i < n; i++) {
 
 [拆炸弹](https://leetcode.cn/problems/defuse-the-bomb/) —— [提交记录](./code/练手题/defuse-the-bomb.py) [提交记录2](./code/练手题/defuse-the-bomb_v2.py)
 
+```python
+class Solution:
+    def decrypt(self, code: List[int], k: int) -> List[int]:
+        n = len(code)
+
+        ans = [0 for _ in range(n)]
+        for i in range(n):
+            if k > 0:
+                sum1 = 0
+                for j in range(i + 1, i + 1 + k):
+                    sum1 += code[j]
+                ans[i] = sum1
+            else:
+                sum1 = 0
+                for j in range(i - 1, i - 1 + k):
+                    newj = (j + n) % n
+                    sum1 += code[newj]
+                ans[i] = sum1
+```
+
+
+
 [验证回文串](https://leetcode.cn/problems/valid-palindrome/) —— [提交记录](./code/练手题/valid-palindrome.py)
+
+```python
+class Solution:
+    def isOK(self, c):
+        if '0' <= c <= '9':
+            return True
+
+        if 'a' <= c <= 'z':
+            return True
+        return False
+
+    def isPalindrome(self, s: str) -> bool:
+        s = s.lower()
+        n = len(s)
+
+        # 双指针
+        ll = 0
+        rr = n - 1
+        while ll < rr: 
+            if not self.isOK(s[ll]):
+                ll = ll + 1
+                continue
+
+            if not self.isOK(s[rr]):
+                rr = rr - 1
+                continue
+
+            if s[ll] != s[rr]:
+                return False
+            
+            ll = ll + 1 
+            rr = rr - 1
+
+        return True
+```
 
 [有效的字母异位词](https://leetcode.cn/problems/valid-anagram/) —— [提交记录](./code/练手题/valid-anagram.py)
 
@@ -153,7 +210,7 @@ def removeDuplicates(self, nums: List[int]) -> int:
 [70. 爬楼梯](https://leetcode.cn/problems/climbing-stairs/)
 
 ```python
-首先可以想到使用递归来实现，很容易想到递归实现：
+# 首先可以想到使用递归来实现，很容易想到递归实现：
 
 ```
 
@@ -532,13 +589,35 @@ class Solution:
 
 ## 二分查找
 
+[704. 二分查找](https://leetcode.cn/problems/binary-search/)
 
+[搜索插入位置](https://leetcode.cn/problems/search-insert-position/)
 
+[在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
+[第一个错误的版本](https://leetcode.cn/problems/first-bad-version/)
+
+###### 题型3: 旋转数组问题
+
+[搜索旋转排序数组](https://leetcode.cn/problems/search-in-rotated-sorted-array/)
+
+[寻找旋转排序数组中的最小值](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/)
+
+###### 题型4：二维数组搜索
+
+[搜索二维矩阵](https://leetcode.cn/problems/search-a-2d-matrix/)
+
+[ 搜索二维矩阵 II](https://leetcode.cn/problems/search-a-2d-matrix-ii/)
+
+###### 题型5：特殊场景
+
+[寻找峰值](https://leetcode.cn/problems/find-peak-element/)
+
+[寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
 
 ## 搜索
 
-##### 一、题型1: 深度优先搜索 — 
+###### 一、题型1: 深度优先搜索
 
 ###### 二、题型2：宽度优先搜索
 
@@ -548,7 +627,7 @@ class Solution:
 
 ###### 题型2：队列
 
-
+###### 题型3：
 
 ## 图
 
