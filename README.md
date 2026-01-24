@@ -163,10 +163,6 @@ def removeDuplicates(self, nums: List[int]) -> int:
 
 ***
 
-## 哈希
-
-
-
 ## 链表
 
 [反转链表](https://leetcode.cn/problems/reverse-linked-list/) —— [提交记录](./code/链表/reverse-linked-list.py)
@@ -207,7 +203,35 @@ class Solution:
 [合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/) —— [提交记录](./code/链表/merge-two-sorted-lists.py)
 
 ```python
-# 排序链表合并操作
+# 排序链表合并操作，归并排序中间的一个简单流程
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        def addNode(node: ListNode):
+            nonlocal head, tail
+            if head is None:
+                head = node
+                tail = node
+            else:
+                tail.next = node
+                tail = node
+
+        head : Optional[ListNode] = None
+        tail : Optional[ListNode] = None
+        while list1 is not None or list2 is not None:
+            if list1 is None:
+                addNode(list2)
+                list2 = list2.next
+            elif list2 is None:
+                addNode(list1)
+                list1 = list1.next
+            else:
+                if list1.val > list2.val:
+                    addNode(list2)
+                    list2 = list2.next
+                else:
+                    addNode(list1)
+                    list1 = list1.next
+        return head
 ```
 
 
