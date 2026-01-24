@@ -14,7 +14,6 @@ for (int i = 0; i < n; i++)
 ```
 for (int i = 0; i < n; i++) {
     for (int j = i; j < n; j++) {
-        
     }
 }
 
@@ -28,21 +27,9 @@ for (int i = 0; i < n; i++) {
 有时候可以通过时间复杂度来判断应该选择什么算法，比如[分割回文串](https://leetcode.cn/problems/palindrome-partitioning/description/?envType=problem-list-v2&envId=string),其中n为16，这个时候可以大概判断是使用dfs来进行递归遍历，后续再补
 ![Alt text](./pic/image.png)
 
-## 练习重点
-
-**1. 首先是排序，一般有一道很复杂的场景题，涉及到的就是排序**
-
-**2.  接下来就是练手题**
-
 
 
 ## 练手题
-
-**没状态的时候记得找几个练手题来做，没提交记录的题目只是列出来，我也没做**
-
-***
-
-
 
 [最长和谐子序列](https://leetcode.cn/problems/longest-harmonious-subsequence/) —— [提交记录](./code/练手题/longest-harmonious-subsequence.py) [提交记录2](./code/练手题/longest-harmonious-subsequence_v2.py)
 
@@ -61,6 +48,30 @@ for (int i = 0; i < n; i++) {
 
 
 [存在重复元素 II](https://leetcode.cn/problems/contains-duplicate-ii/) —— [提交记录](./code/练手题/contains-duplicate-ii.py)
+
+```python
+   # 维护一个map,map存每个数字所在的位置
+   def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+        n = len(nums)
+        maps = {}
+
+        for i in range(n):
+            if maps.__contains__(nums[i]):
+                j = maps[nums[i]] # 如何当前数字出现过，那么就判断两个位置是不是小于等于
+                if i - j <= k:
+                    return True
+                else:
+                    maps[nums[i]] = i
+            else:
+                maps[nums[i]] = i
+
+        return False
+    
+    #方法二：
+    # 做了后面的题目，可以想到使用滑动窗口来实现，待补充
+```
+
+
 
 [拆炸弹](https://leetcode.cn/problems/defuse-the-bomb/) —— [提交记录](./code/练手题/defuse-the-bomb.py) [提交记录2](./code/练手题/defuse-the-bomb_v2.py)
 
@@ -137,41 +148,71 @@ def removeDuplicates(self, nums: List[int]) -> int:
 
 
 
-[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/)
-
-[206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
-
-[21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
+[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/) —— [提交记录](./code/练手题/valid-parentheses.py)
 
 [70. 爬楼梯](https://leetcode.cn/problems/climbing-stairs/)
 
-[买卖股票的最佳时机](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/)
+```python
+首先可以想到使用递归来实现，很容易想到递归实现：
 
-[环形链表](https://leetcode.cn/problems/linked-list-cycle/)
-
-[删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)
-
-[二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
+```
 
 [三数之和](https://leetcode.cn/problems/3sum/)
-
-[ 打家劫舍](https://leetcode.cn/problems/house-robber/)
-
-[二分查找](https://leetcode.cn/problems/binary-search/) 
-
-[螺旋矩阵](https://leetcode.cn/problems/spiral-matrix/) 
 
 [验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/)
 
 ***
 
+## 哈希
+
+
+
 ## 链表
 
-[反转链表](https://leetcode.cn/problems/reverse-linked-list/)
+[反转链表](https://leetcode.cn/problems/reverse-linked-list/) —— [提交记录](./code/链表/reverse-linked-list.py)
 
-[合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
+```python
+# 反转逻辑，使用堆栈来实现
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        # 堆栈
+        stack = []
+        while head is not None:
+            stack.append(head)
+            head = head.next
 
-[删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)
+        def addNode(node):
+            nonlocal head, tail
+            if head is None:
+                head = node
+                tail = node
+            else:
+                tail.next = node
+                tail = node
+
+        head = None
+        tail = None
+        while len(stack) > 0:
+            cur = stack[-1]
+            cur.next = None
+            stack.pop()
+
+            addNode(cur)
+
+        return head
+```
+
+
+
+[合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/) —— [提交记录](./code/链表/merge-two-sorted-lists.py)
+
+```python
+# 排序链表合并操作
+```
+
+
+
+[删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/) —— 
 
 [移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/)
 
@@ -465,6 +506,10 @@ def removeDuplicates(self, nums: List[int]) -> int:
 
 [跳转地址](./notes/排序.md)
 
+## 二分查找
+
+
+
 
 
 ## 搜索
@@ -475,7 +520,15 @@ def removeDuplicates(self, nums: List[int]) -> int:
 
 ## 数据结构
 
-###### 题型1：并查集
+###### 题型1：栈
+
+###### 题型2：队列
+
+
+
+## 图
+
+
 
 
 
