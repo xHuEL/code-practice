@@ -110,18 +110,18 @@ class Solution:
         return False
 
     def isPalindrome(self, s: str) -> bool:
-        s = s.lower()
+        s = s.lower()  ## 规划化
         n = len(s)
 
         # 双指针
         ll = 0
         rr = n - 1
         while ll < rr: 
-            if not self.isOK(s[ll]):
+            if not self.isOK(s[ll]):  ## 判断是否是0-9，a-z的字符
                 ll = ll + 1
                 continue
 
-            if not self.isOK(s[rr]):
+            if not self.isOK(s[rr]): ## 判断是否是0-9，a-z的字符
                 rr = rr - 1
                 continue
 
@@ -199,7 +199,7 @@ def removeDuplicates(self, nums: List[int]) -> int:
            nums[ll + 1] = nums[i]
            ll += 1
     return ll
-# 从第一位开始，比较它跟前一位是不是相同，如果不是相同那么将它移动到位置l，同时位置l记得要1
+# 从第一位开始，比较它跟前一位是不是相同，如果不相同那么将它移动到位置L，同时位置L记得要加1
 # 这是一道模拟题，其实也可以开一个新的列表，这样更好理解
 ```
 
@@ -207,11 +207,61 @@ def removeDuplicates(self, nums: List[int]) -> int:
 
 [20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/) —— [提交记录](./code/练手题/valid-parentheses.py)
 
+```python
+## 堆栈的基本用法
+    def isValid(self, s: str) -> bool:
+        n = len(s)
+        stk = ['0' for i in range(n)]
+
+        top = 0
+        for i in range(n):
+            if s[i] == '[' or s[i] == '(' or s[i] == '{':   # 
+                stk[top] = s[i]
+                top += 1
+            else:
+                ss = stk[top - 1]
+                flag = False
+                if s[i] == ']' and ss == '[':
+                    flag = True
+                elif s[i] == '}' and ss == '{':
+                    flag = True
+                elif s[i] == ')' and ss == '(':
+                    flag = True
+
+                if not flag:
+                    return False
+                top = top - 1
+        if top == 0:
+            return True
+        return False
+
+```
+
+
+
 [70. 爬楼梯](https://leetcode.cn/problems/climbing-stairs/)
 
 ```python
 # 首先可以想到使用递归来实现，很容易想到递归实现：
+    def climbStairs(self, n: int) -> int:
+        if n == 1:
+            return 1
 
+        if n == 2:
+            return 1
+    
+        return self.climbStairs(n - 1) + self.climbStairs(n - 2)
+
+# 观察上面的公式，其实是一个斐波那契数列，可以使用递推方式来实现
+    def climbStairs(self, n: int) -> int:
+        f = [0 for _ in range(n)]
+        f[1] = 1
+        f[2] = 1
+
+        for i in range(3, n + 1):
+            f[i] = f[i - 1] + f[i - 2]
+
+        return f[n]
 ```
 
 [三数之和](https://leetcode.cn/problems/3sum/)
@@ -625,15 +675,45 @@ class Solution:
 
 ###### 题型1：栈
 
+[有效的括号](https://leetcode.cn/problems/valid-parentheses/)
+
+[最小栈](https://leetcode.cn/problems/min-stack/)
+
+[用队列实现栈](https://leetcode.cn/problems/implement-stack-using-queues/)
+
+[棒球比赛](https://leetcode.cn/problems/baseball-game/)
+
+[验证栈序列](https://leetcode.cn/problems/validate-stack-sequences/)
+
+[简化路径](https://leetcode.cn/problems/simplify-path/)
+
+[逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/)
+
+[字符串解码](https://leetcode.cn/problems/decode-string/)
+
+[柱状图中最大的矩形](https://leetcode.cn/problems/largest-rectangle-in-histogram/)
+
+[最大矩形](https://leetcode.cn/problems/maximal-rectangle/)
+
+[接雨水](https://leetcode.cn/problems/trapping-rain-water/)
+
+[去除重复字母](https://leetcode.cn/problems/remove-duplicate-letters/)
+
 ###### 题型2：队列
 
-###### 题型3：
+###### 题型3：堆
+
+###### 题型4：并查集
+
+###### 题型3: 字典树（暂时不用）
 
 ## 图
 
+###### 题型1：最短路
 
+###### 题型2：最小生成树
 
-
+###### 题型3：拓扑排序
 
 ## 字符串
 
@@ -641,10 +721,5 @@ class Solution:
 
 
 
+## 数学
 
-
-
-
-## 刷题记录
-
-![提交记录](./notes/pic/提交记录.png)
