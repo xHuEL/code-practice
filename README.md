@@ -701,7 +701,55 @@ class Solution:
 
 ###### 题型2：队列
 
+[用栈实现队列](https://leetcode.cn/problems/implement-queue-using-stacks/)
+
+[用队列实现栈](https://leetcode.cn/problems/implement-stack-using-queues/)
+
+[数据流中的移动平均值](https://leetcode.cn/problems/moving-average-from-data-stream/)
+
+[最近的请求次数](https://leetcode.cn/problems/number-of-recent-calls/)
+
+[设计循环队列](https://leetcode.cn/problems/design-circular-queue/)
+
+[设计循环双端队列](https://leetcode.cn/problems/design-circular-deque/)
+
+[设计前中后队列](https://leetcode.cn/problems/design-front-middle-back-queue/)
+
+[滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/)
+
+[数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream/)
+
+[和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/)
+
+[绝对差不超过限制的最长连续子数组](https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)
+
+[预算内的最多机器人数目](https://leetcode.cn/problems/maximum-number-of-robots-within-budget/)
+
 ###### 题型3：堆
+
+[最后一块石头的重量](https://leetcode.cn/problems/last-stone-weight/)
+
+[数据流中的第 K 大元素](https://leetcode.cn/problems/kth-largest-element-in-a-stream/)
+
+[最小的k个数](https://leetcode.cn/problems/zui-xiao-de-kge-shu-lcof/)
+
+[数组中两元素的最大乘积](https://leetcode.cn/problems/maximum-product-of-two-elements-in-an-array/)
+
+[数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
+
+[前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/)
+
+[会议室 II](https://leetcode.cn/problems/meeting-rooms-ii/)
+
+[有序矩阵中第 K 小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/)
+
+[数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream/)
+
+[滑动窗口中位数](https://leetcode.cn/problems/sliding-window-median/)
+
+[滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/)
+
+[最小区间](https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists/)
 
 ###### 题型4：并查集
 
@@ -722,6 +770,8 @@ class Solution:
 
 
 ## 数学
+
+## 动态规划
 
 
 
