@@ -9,8 +9,8 @@ class ListNode:
 
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        ans = None
-        last = None
+        head = None
+        tail = None
         catch = 0
         while l1 is not None or l2 is not None:
             newNode = ListNode(catch)
@@ -25,15 +25,15 @@ class Solution:
             catch = int(newNode.val / 10)
             newNode.val = int(newNode.val % 10)
 
-            if ans is None:
-                ans = newNode
-                last = newNode
+            if head is None:
+                head = newNode
+                tail = newNode
             else:
-                last.next = newNode
-                last = newNode
+                tail.next = newNode
+                tail = newNode
 
         if catch > 0:
             newNode = ListNode(catch)
-            last.next = newNode
+            tail.next = newNode
 
-        return ans
+        return head

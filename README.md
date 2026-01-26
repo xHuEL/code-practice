@@ -244,3 +244,5 @@ class Solution:
 ## 总结
 
 更详细的练习题，移步到notes/目录
+
+或者直接刷https://leetcode.cn/studyplan/top-100-liked/这个吧。
