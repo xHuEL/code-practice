@@ -1,3 +1,5 @@
+加油，希望这些能对你有帮助。
+
 ## 练手题
 
 [最长和谐子序列](https://leetcode.cn/problems/longest-harmonious-subsequence/) —— [提交记录](./code/练手题/longest-harmonious-subsequence.py) [提交记录2](./code/练手题/longest-harmonious-subsequence_v2.py)
