@@ -1,5 +1,3 @@
-加油，希望这些能对你有帮助。
-
 ## 练手题
 
 [最长和谐子序列](https://leetcode.cn/problems/longest-harmonious-subsequence/) —— [提交记录](./code/练手题/longest-harmonious-subsequence.py) [提交记录2](./code/练手题/longest-harmonious-subsequence_v2.py)
@@ -127,7 +125,7 @@ class Solution:
 
 [相交链表](https://leetcode.cn/problems/intersection-of-two-linked-lists/)
 
-# 滑动窗口
+## 滑动窗口
 
 [定长子串中元音的最大数目](https://leetcode.cn/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) 
 
@@ -139,81 +137,15 @@ class Solution:
 
 [删掉一个元素以后全为 1 的最长子数组](https://leetcode.cn/problems/longest-subarray-of-1s-after-deleting-one-element/) 
 
-## 递归
-
-[子集](https://leetcode.cn/problems/subsets/) —— [提交记录](./code/递归/subsets.py)
-
-[电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/) —— [提交记录](./code/递归/letter-combinations-of-a-phone-number.py)
-
-[全排列](https://leetcode.cn/problems/permutations/)
-
-[二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/)
-
-[二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
-
-[二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/)
-
-[二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
-
 # 排序
 
 [合并两个有序数组](https://leetcode.cn/problems/merge-sorted-array/) —— 归并排序
 
 [重新排列日志文件](https://leetcode.com/problems/reorder-data-in-log-files/) —— 自定义排序
 
-[多数元素](https://leetcode.com/problems/majority-element/) —— 快速排序
-
 [最后一块石头的重量](https://leetcode.com/problems/last-stone-weight/) —— 堆排序
 
 [ 数组的相对排序](https://leetcode.com/problems/relative-sort-array/) —— 桶排序
-
-## 二分查找
-
-[704. 二分查找](https://leetcode.cn/problems/binary-search/)
-
-[搜索插入位置](https://leetcode.cn/problems/search-insert-position/)
-
-[在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/)
-
-[ 搜索二维矩阵 II](https://leetcode.cn/problems/search-a-2d-matrix-ii/)
-
-[寻找峰值](https://leetcode.cn/problems/find-peak-element/)
-
-## 搜索
-
-[岛屿数量](https://leetcode.cn/problems/number-of-islands/)
-
-[被围绕的区域](https://leetcode.cn/problems/surrounded-regions/)
-
-[岛屿的最大面积](https://leetcode.cn/problems/max-area-of-island/)
-
-[腐烂的橘子](https://leetcode.cn/problems/rotting-oranges/)
-
-[跳跃游戏 III](https://leetcode.cn/problems/jump-game-iii/)
-
-## 数据结构
-
-[有效的括号](https://leetcode.cn/problems/valid-parentheses/) —— 栈
-
-[最小栈](https://leetcode.cn/problems/min-stack/) —— 栈
-
-[用队列实现栈](https://leetcode.cn/problems/implement-stack-using-queues/) —— 栈
-
-[最近的请求次数](https://leetcode.cn/problems/number-of-recent-calls/) —— 队列
-
-[设计循环队列](https://leetcode.cn/problems/design-circular-queue/) —— 队列
-
-[前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/) —— 堆
-
-[会议室 II](https://leetcode.cn/problems/meeting-rooms-ii/) —— 堆
-
-## 图
-
-[ 133. 克隆图](https://leetcode.cn/problems/clone-graph/)
-
-[743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time/)
-
-[ 1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/)
 
 ## 字符串
 
@@ -225,27 +157,18 @@ class Solution:
 
 [ 8. 字符串转换整数 (atoi)](https://leetcode.cn/problems/string-to-integer-atoi/)
 
-## 数学
 
-[ 50. Pow(x, n)](https://leetcode.cn/problems/powx-n/)
-
-[ 136. 只出现一次的数字](https://leetcode.cn/problems/single-number/)
-
-[231. 2的幂](https://leetcode.cn/problems/power-of-two/)
-
-## 动态规划
-
-[53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)
-
-[300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/)
-
-[ 1143. 最长公共子序列](https://leetcode.cn/problems/longest-common-subsequence/)
-
-[ 416. 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/)
 
 ## 总结
 
-更详细的练习题，移步到notes/目录
+只是为了公司考试，只要做练手题和排序题、堆栈以及字符串，其他的没必要。主要考察的还是基本代码编写能力。以我的经验，第二题一般都是题目很长的模拟题，也不会涉及算法，最多只涉及到排序。第一题要么是栈，要么滑动窗口，要么字符串处理，也不会特别难。
 
-或者直接刷https://leetcode.cn/studyplan/top-100-liked/ 这个吧，这个更有价值。
+如果为了接下来考虑，听说刷https://leetcode.cn/studyplan/top-100-liked/ 就可以了。
 
+可能只是刷上面题，不一定保证能过，可以看看后面README_V2.md,  notes/的题，其实选做就可以了，不需要全部做。
+
+好像一开始我确实不会转弯，都快列出所有类型的题目了，回头我问一下其他的人，对算法的要求到底是什么， 后面再更新吧。也希望这些对你有帮助。
+
+
+
+半夜睡不着，突然好想写点什么，大概是把这个地方当树洞，你估计也不会看，其他人也发现不了。 似乎我藏了好多事情啊，都没有地方可以说，这个地方刚刚好，可以说一些有的没的。今天接下llq的事情之后，就有似乎有种感觉：好像我是快要离开这边了，所以半夜睡不着。最近一直在送别人走，昨天大兵哥是last day，问我喊了那么多年要走，为什么今年不喊了，我跟他说：真正的原因，以后有机会再说。希望我能坚持的久点吧，真的到我走的那天，能在这边写下来。我最近一直在回避“离开”这个话题，特别是在知道这些会影响到你的心情的时候，会顾虑到不再去说这些事情，后来发现周边人好多都在跟你传递这些，我还想扮演一个乐观者的形象，但是我并扮演不好这个角色，顾虑太多，都不知道该说些什么了。不过有可能也并不是因为这些顾虑
