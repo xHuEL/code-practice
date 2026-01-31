@@ -123,7 +123,7 @@ class Solution:
         if len(counter) != 0:
             return False
         return True
-# 从这一题能学到Counter。
+# 从这一题能学到Counter，没想到counter还可以通过del来实现
 ```
 
 
@@ -216,6 +216,39 @@ class Solution:
 # 排序
 
 [合并两个有序数组](https://leetcode.cn/problems/merge-sorted-array/) —— 归并排序
+
+```python
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        first = m - 1 ## 从后往前遍历，主要是为了保证
+        second = n - 1
+
+        cnt = m + n - 1
+    
+        while first >= 0 or second >= 0:
+            if first < 0:
+                nums1[cnt] = nums2[second]
+                cnt -= 1
+                second -= 1
+                
+            elif second < 0:
+                nums1[cnt] = nums1[first]
+                cnt -= 1
+                first -= 1
+            elif nums1[first] > nums2[second]:
+                nums1[cnt] = nums1[first]
+                cnt -= 1
+                first -= 1
+            else:
+                nums1[cnt] = nums2[second]
+                cnt -= 1
+                second -= 1
+```
+
+
 
 [重新排列日志文件](https://leetcode.com/problems/reorder-data-in-log-files/) —— 自定义排序
 
