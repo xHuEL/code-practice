@@ -251,7 +251,32 @@ class Solution:
         return head
 ```
 
-[移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/)
+[移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/) —— [提交记录](./code/链表/remove-linked-list-elements.py)
+
+```python
+class Solution:
+    def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
+        cur = head
+        prev = None
+
+        def delNode(node: ListNode):
+            nonlocal prev, head
+            if prev is not None:
+                prev.next = node.next
+            else:
+                head = node.next
+
+        while cur is not None:
+            if cur.val == val:
+                delNode(cur)
+            else:
+                prev = cur
+            cur = cur.next
+        return head
+
+```
+
+
 
 [环形链表](https://leetcode.cn/problems/linked-list-cycle/) —— [提交记录](./code/链表/linked-list-cycle.py)
 
@@ -349,6 +374,28 @@ class Solution:
 ## 字符串
 
 [344. 反转字符串](https://leetcode.cn/problems/reverse-string/)
+
+```python
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        def swap(a, b):
+            temp = s[a]
+            s[a] = s[b]
+            s[b] = temp
+
+        L = 0
+        R = len(s) - 1
+
+        while L < R:
+            swap(L, R)
+            L += 1
+            R -= 1
+```
+
+
 
 [125. 验证回文串](https://leetcode.cn/problems/valid-palindrome/)
 
