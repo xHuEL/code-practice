@@ -130,9 +130,99 @@ class Solution:
 
 [反转字符串中的元音字母](https://leetcode.cn/problems/reverse-vowels-of-a-string/) —— [提交记录](./code/练手题/reverse-vowels-of-a-string.py)
 
+```python
+class Solution:
+    def isYuan(self, c): # 判断是否是元音
+        str = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+        if c in str:
+            return True
+        return False
+
+    def reverseVowels(self, s: str) -> str: # 主要是考察双指针
+        n = len(s)
+
+        ll = 0
+        rr = n - 1
+        ans = ['0' for _ in range(n)]
+
+        while ll <= rr:
+            if not self.isYuan(s[ll]):
+                ans[ll] = s[ll]
+                ll += 1
+                continue
+
+            if not self.isYuan(s[rr]):
+                ans[rr] = s[rr]
+                rr -= 1
+                continue
+
+            ans[ll], ans[rr] = s[rr], s[ll]            
+            ll += 1
+            rr -= 1
+        return ''.join(ans)
+
+```
+
+
+
 [数字转换为十六进制数](https://leetcode.cn/problems/convert-a-number-to-hexadecimal/) —— [提交记录](./code/练手题/convert-a-number-to-hexadecimal.py)
 
+```python
+class Solution:
+    def toHex(self, num: int) -> str:
+        if num == 0:
+            return "0"
+
+        maps = '0123456789abcdef'
+        if num < 0:
+            num += 2 ** 32 ## 主要是为了处理补码，记住就行了，没什么技巧。 负数的补码要加上2^32
+
+        ans = ''
+        while num > 0:
+            inx = int(num % 16)
+            c = maps[inx]
+            ans += c
+            num = int(num / 16)
+        return ans[::-1]
+```
+
+
+
 [两个数组的交集](https://leetcode.cn/problems/intersection-of-two-arrays/) —— [提交记录](./code/练手题/intersection-of-two-arrays.py)
+
+```python
+## 其中的一种解法，排序然后通过双指针求出交集，主要是训练编码能力。也可以使用dict来求解，更简单
+class Solution:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        nums1.sort()
+        nums2.sort()
+        
+        m1 = len(nums1)
+        m2 = len(nums2)
+        
+        l1 = 0
+        l2 = 0
+        ans = []
+        cnt = 0 # 计数
+        while l1 < m1 and l2 < m2:
+            if nums1[l1] == nums2[l2]:
+                if cnt == 0:
+                    ans.append(nums1[l1])
+                    cnt =  + 1
+                else:
+                    if ans[cnt - 1] != nums1[l1]:
+                        ans.append(nums1[l1])
+                        cnt = cnt + 1
+                l1 += 1
+                l2 += 1
+            elif nums1[l1] < nums2[l2]:
+                l1 += 1
+            else:
+                l2 += 1
+        return ans
+```
+
+
 
 ***
 
