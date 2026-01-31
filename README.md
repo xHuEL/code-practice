@@ -105,6 +105,29 @@ class Solution:
 
 [有效的字母异位词](https://leetcode.cn/problems/valid-anagram/) —— [提交记录](./code/练手题/valid-anagram.py)
 
+```python
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        # 异位词，使用python的counter, 后面会用到
+        counter = Counter()
+        for c in s:
+            counter[c] += 1
+
+        for c in t:
+            if counter[c] == 0:
+                return False
+            counter[c] -= 1
+            if counter[c] == 0:
+                del counter[c]
+        
+        if len(counter) != 0:
+            return False
+        return True
+# 从这一题能学到Counter。
+```
+
+
+
 [反转字符串中的元音字母](https://leetcode.cn/problems/reverse-vowels-of-a-string/) —— [提交记录](./code/练手题/reverse-vowels-of-a-string.py)
 
 [数字转换为十六进制数](https://leetcode.cn/problems/convert-a-number-to-hexadecimal/) —— [提交记录](./code/练手题/convert-a-number-to-hexadecimal.py)
@@ -115,11 +138,64 @@ class Solution:
 
 ## 链表
 
-[删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/) 
+[删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)  —— [提交记录](./code/链表/remove-duplicates-from-sorted-list.py)
+
+```python
+class Solution:
+    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        prev = None
+        cur = head
+
+        def delNode():
+            prev.next = cur.next
+
+        while cur is not None:
+            if prev is not None:
+                if cur.val == prev.val:
+                    delNode()
+                else:
+                    prev = cur
+            else:
+                prev = cur
+            cur = cur.next
+        return head
+```
 
 [移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/)
 
-[环形链表](https://leetcode.cn/problems/linked-list-cycle/)
+[环形链表](https://leetcode.cn/problems/linked-list-cycle/) —— [提交记录](./code/链表/linked-list-cycle.py)
+
+```python
+## 很经典的题目，一定要记住，快慢指针。
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        # 快慢指针
+        if head is None:
+            return False
+
+        slow = head
+        if slow is None:
+            return False
+
+        fast = slow.next
+        if fast is None:
+            return False
+            
+        while True:
+            if fast == slow:
+                return True
+        
+            slow = slow.next
+            fast = fast.next
+            if fast is None:
+                return False
+            
+            fast = fast.next
+            if fast is None:
+                return False
+```
+
+
 
 [ 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/)
 
