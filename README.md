@@ -320,13 +320,166 @@ class Solution:
 
 [定长子串中元音的最大数目](https://leetcode.cn/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) 
 
+```python
+class Solution:
+    def isyuan(self, c):
+        ss = ['a', 'e', 'i', 'o', 'u']
+        for cc in ss:
+            if cc == c:
+                return True
+        return False
+
+    def maxVowels(self, s: str, k: int) -> int:
+        n = len(s)
+
+        ll = 0
+        rr = min(n, ll + k)
+        cnt = 0
+        for i in range(ll, rr):
+            if self.isyuan(s[i]):
+                cnt += 1
+        
+        ans = cnt
+        while rr < n:
+            ll += 1
+            rr += 1
+
+            cnt -= self.isyuan(s[ll - 1])
+            cnt += self.isyuan(s[rr - 1])
+
+            if cnt > ans:
+                ans = cnt
+        
+        return ans
+            
+```
+
+
+
 [子数组最大平均数 I](https://leetcode.cn/problems/maximum-average-subarray-i/)
+
+```python
+class Solution:
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
+        sum = 0.0
+
+        n = len(nums)
+        ll = 0
+        rr = min(ll + k, n)
+        ans = 0.0
+
+        for i in range(ll, rr):
+            sum += nums[i]
+            ans = sum
+
+        while rr < n:
+            ll += 1
+            rr += 1
+
+            sum -= nums[ll - 1]
+            sum += nums[rr - 1]
+
+            if ans < sum:
+                ans = sum
+
+        return ans / k
+
+```
+
+
 
 [无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
 
+```python
+# 对于单字符串而言，一般思路就是遍历整个字符串，然后使用中间变量来维持状态
+# 本题思路：找到每个字符左边最近字符的位置a，然后计算当前位置b和左边最近字符的位置a的差值t
+# 最后比较每个字符的差值t，找到最大值
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        # 每个字符的最后出现的位置，位置为str的索引下标。 比如abc，其中字符a的索引位置为-1， b的索引位置为1， c的索引位置为2
+        indices_map = {}
+        # 最长非重复子串的长度
+        max_len = 0
+        # 以当前字符为结尾的最长非重复子串的长度
+        cur_len = 0
+
+        for index, c in enumerate(s):
+            if not indices_map.__contains__(c):
+                cur_len = cur_len + 1
+            else:
+                cur_len = min(index - indices_map[c], cur_len + 1)
+
+            if cur_len > max_len:
+                max_len = cur_len
+            indices_map[c] = index
+
+        return max_len
+
+```
+
+
+
 [每个字符最多出现两次的最长子字符串](https://leetcode.cn/problems/maximum-length-substring-with-two-occurrences/) 
 
+```python
+class Solution:
+    def maximumLengthSubstring(self, s: str) -> int:
+        n = len(s)
+
+        # 跟踪窗口中每个字符的出现次数
+        maps = defaultdict(int)
+        left = 0
+        ans = 0
+
+        for right in range(n):
+            c = s[right]
+            maps[c] += 1
+
+            # 如果当前字符出现超过2次，移动左指针直到它降为2次
+            while maps[c] > 2:
+                maps[s[left]] -= 1
+                left += 1
+
+            # 更新最大长度
+            ans = max(ans, right - left + 1)
+
+        return ans
+```
+
+
+
 [删掉一个元素以后全为 1 的最长子数组](https://leetcode.cn/problems/longest-subarray-of-1s-after-deleting-one-element/) 
+
+```
+class Solution:
+    def longestSubarray(self, nums: List[int]) -> int:
+        n = len(nums)
+
+        delete_cnt = 0
+        first = 0
+        second = 0
+
+        ans = 0
+
+        for i in range(n):
+            second = i
+
+            if nums[i] == 0:
+                delete_cnt += 1
+
+            while delete_cnt > 1:
+                if nums[first] == 0:
+                    delete_cnt -= 1
+                first += 1
+
+            ans = max(ans, second - first)
+        return ans
+
+
+```
+
+
 
 # 排序
 
@@ -399,7 +552,74 @@ class Solution:
 
 [125. 验证回文串](https://leetcode.cn/problems/valid-palindrome/)
 
+```python
+class Solution:
+    def isOK(self, c):
+        if '0' <= c <= '9':
+            return True
+
+        if 'a' <= c <= 'z':
+            return True
+        return False
+
+    def isPalindrome(self, s: str) -> bool:
+        s = s.lower()
+        n = len(s)
+
+        # 双指针
+        ll = 0
+        rr = n - 1
+        while ll < rr:
+            if not self.isOK(s[ll]):
+                ll = ll + 1
+                continue
+
+            if not self.isOK(s[rr]):
+                rr = rr - 1
+                continue
+
+            if s[ll] != s[rr]:
+                return False
+            
+            ll = ll + 1
+            rr = rr - 1
+
+        return True
+```
+
+
+
 [ 14. 最长公共前缀](https://leetcode.cn/problems/longest-common-prefix/)
+
+```python
+class Solution:
+    def find_longest_prefix(self, str1, str2) -> int:
+        str_len1 = len(str1)
+        str_len2 = len(str2)
+
+        result = 0
+        for i in range(min(str_len1, str_len2)):
+            if str1[i] != str2[i]:
+                break
+            result += 1
+        return result
+
+
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        list_len = len(strs)
+        result = sys.maxsize
+
+        if list_len == 0:
+            return strs[0]
+
+        for i in range(list_len):
+            result = min(self.find_longest_prefix(strs[0], strs[i]), result)
+
+        return strs[0][0:result]
+
+```
+
+
 
 [ 8. 字符串转换整数 (atoi)](https://leetcode.cn/problems/string-to-integer-atoi/)
 
