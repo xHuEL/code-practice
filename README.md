@@ -520,9 +520,38 @@ class Solution:
 
 [重新排列日志文件](https://leetcode.com/problems/reorder-data-in-log-files/) —— 自定义排序
 
-[最后一块石头的重量](https://leetcode.com/problems/last-stone-weight/) —— 堆排序
+[最后一块石头的重量](https://leetcode.cn/problems/last-stone-weight/) —— 堆排序
 
-[ 数组的相对排序](https://leetcode.com/problems/relative-sort-array/) —— 桶排序
+```python
+import heapq
+from heapq import heappop, heappush
+from typing import List
+
+
+# 最大堆是一个可以自动维护最大值的数据结构
+# 将最大堆中的最大值pop出来之后，最大堆会自动将剩余的最大值放在队列的前面
+# 注意：最大堆只是维护最大值，最大堆是不知道第二大的数
+# 在python中heapy来实现最大堆
+class Solution:
+    def lastStoneWeight(self, stones: List[int]) -> int:
+        arr = [-stone for stone in stones]
+        heapq.heapify(arr)
+
+        while len(arr) > 1:
+            x = heappop(arr)
+            y = heappop(arr)
+
+            if x < y:
+                heappush(arr, x - y)
+            elif x > y:
+                heappush(arr, y - x)
+        return -arr[0] if arr else 0
+
+```
+
+
+
+[ 数组的相对排序](https://leetcode.cn/problems/relative-sort-array/) —— 桶排序
 
 ## 字符串
 
@@ -623,13 +652,50 @@ class Solution:
 
 [ 8. 字符串转换整数 (atoi)](https://leetcode.cn/problems/string-to-integer-atoi/)
 
+```python
+class Solution:
+    def myAtoi(self, s: str) -> int:
+        n = len(s)
+
+        ans = 0
+        i = 0
+        while i < n and s[i] == ' ':
+            i += 1
+            # print(i)
+
+        sign = True
+        if i < n and s[i] == '-':
+            sign = False
+            i += 1
+        elif i < n and s[i] == '+':
+            sign = True
+            i += 1
+
+        while i < n and '0' <= s[i] <= '9':
+            ans = ans * 10 + int(s[i])
+            i += 1
+        
+        if sign:
+            if ans > 2**31 - 1:
+                return 2**31 - 1
+            return ans
+        else:
+            if ans > 2**31:
+                return -2**31
+            return -ans
+```
+
+
+
+## 数据结构
+
 
 
 ## 总结
 
 只是为了公司考试，只要做练手题和排序题、堆栈以及字符串，其他的没必要。主要考察的还是基本代码编写能力。以我的经验，第二题一般都是题目很长的模拟题，也不会涉及算法，最多只涉及到排序。第一题要么是栈，要么滑动窗口，要么字符串处理，也不会特别难。
 
-如果为了接下来考虑，听说刷https://leetcode.cn/studyplan/top-100-liked/ 就可以了。
+如果为了接下来考虑，听说刷https://leetcode.cn/studyplan/top-100-liked/ 就可以了。跳转地址[提交打卡](./leetcode热题打卡版.md)
 
 可能只是刷上面题，不一定保证能过，可以看看后面README_V2.md,  notes/的题，其实选做就可以了，不需要全部做。
 
