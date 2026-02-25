@@ -1,1 +1,1 @@
-[最小栈](https://leetcode.cn/problems/min-stack/description/?envType=study-plan-v2&envId=top-100-liked) 
+[最小栈](https://leetcode.cn/problems/min-stack/description/?envType=study-plan-v2&envId=top-100-liked) —— [提交记录](https://leetcode.cn/problems/min-stack/submissions/700551933/?envType=study-plan-v2&envId=top-100-liked)
