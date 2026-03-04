@@ -22,6 +22,10 @@
 
 [最大子数组和](https://leetcode.cn/problems/maximum-subarray/)  —— [提交记录](./top100热题/maximum-subarray.py)
 
+[最小栈](https://leetcode.cn/problems/min-stack/description/?envType=study-plan-v2&envId=top-100-liked) —— [提交记录](./top100热题/min-stack.py)
+
+[盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/) —— [提交记录](./top100热题/container-with-most-water.py)
+
 ## 链表
 
 [删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)  —— [提交记录](./code/链表/remove-duplicates-from-sorted-list.py)
@@ -72,7 +76,7 @@
 
 ## 碎碎念
 
-总觉得大模型总结比我好很多，好像我总结的也没多大帮助。但是陪伴也是有意义的吧，所以以后应该都是一起打卡版了。
+总觉得大模型总结比我好很多，好像我总结的也没多大帮助。但是陪伴也是有意义的吧，所以以后应该都是一起打卡了。
 
 
 
