@@ -28,6 +28,8 @@
 
 [无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/) —— [提交记录](./top100热题/longest-substring-without-repeating-characters.py)
 
+[合并区间](https://leetcode.cn/problems/merge-intervals/) —— [提交记录](./top100热题/merge-intervals.py)
+
 ## 链表
 
 [删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)  —— [提交记录](./code/链表/remove-duplicates-from-sorted-list.py)
