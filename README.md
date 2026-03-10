@@ -30,6 +30,8 @@
 
 [合并区间](https://leetcode.cn/problems/merge-intervals/) —— [提交记录](./top100热题/merge-intervals.py)
 
+[轮转数组](https://leetcode.cn/problems/rotate-array/) —— [提交记录](./top100热题/rotate-array.py)
+
 ## 链表
 
 [删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)  —— [提交记录](./code/链表/remove-duplicates-from-sorted-list.py)
