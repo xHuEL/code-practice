@@ -32,6 +32,8 @@
 
 [轮转数组](https://leetcode.cn/problems/rotate-array/) —— [提交记录](./top100热题/rotate-array.py)
 
+[除了自身以外数组的乘积](https://leetcode.cn/problems/product-of-array-except-self/) —— [提交记录](./top100热题/product-of-array-except-self.py)
+
 ## 链表
 
 [删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)  —— [提交记录](./code/链表/remove-duplicates-from-sorted-list.py)
@@ -86,7 +88,9 @@
 
 
 
-再加上一个[大模型目录](./大模型知识汇总)，里面包括一些大模型相关知识点
+再加上一个[大模型目录](./大模型知识汇总)，里面包括一些大模型相关知识点.
+
+
 
 
 
