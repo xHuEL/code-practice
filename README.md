@@ -34,6 +34,8 @@
 
 [除了自身以外数组的乘积](https://leetcode.cn/problems/product-of-array-except-self/) —— [提交记录](./top100热题/product-of-array-except-self.py)
 
+[缺失的第一个正数](https://leetcode.cn/problems/first-missing-positive/) —— [提交记录](./top100热题/first-missing-positive.py)
+
 ## 链表
 
 [删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)  —— [提交记录](./code/链表/remove-duplicates-from-sorted-list.py)
