@@ -36,6 +36,8 @@
 
 [缺失的第一个正数](https://leetcode.cn/problems/first-missing-positive/) —— [提交记录](./top100热题/first-missing-positive.py)
 
+[找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/) —— [提交记录](./top100热题/find-all-anagrams-in-a-string.py)
+
 ## 链表
 
 [删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)  —— [提交记录](./code/链表/remove-duplicates-from-sorted-list.py)
