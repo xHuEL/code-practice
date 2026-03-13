@@ -72,6 +72,8 @@
 
 [ 数组的相对排序](https://leetcode.cn/problems/relative-sort-array/) —— 桶排序
 
+[前K个高频单词](https://leetcode.cn/problems/top-k-frequent-words/) —— [提交记录](./code/排序/top-k-frequent-words.py)
+
 ## 字符串
 
 [344. 反转字符串](https://leetcode.cn/problems/reverse-string/)
