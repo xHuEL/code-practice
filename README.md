@@ -74,6 +74,8 @@
 
 [前K个高频单词](https://leetcode.cn/problems/top-k-frequent-words/) —— [提交记录](./code/排序/top-k-frequent-words.py)
 
+[根据字符出现频率排序](https://leetcode.cn/problems/sort-characters-by-frequency/) —— [提交记录](./code/排序/sort-characters-by-frequency.py)
+
 ## 字符串
 
 [344. 反转字符串](https://leetcode.cn/problems/reverse-string/)
